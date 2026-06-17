@@ -1,6 +1,8 @@
+namespace IMCCalculator.ViewModels;
 using CommunityToolkit.Mvvm.ComponentModel;
-namespace IMCCalculator.ViewModels
-{
+using CommunityToolkit.Mvvm.Input;
+
+
     public partial class IMCCalculatorViewModel : ObservableObject
     {
         [ObservableProperty]
@@ -13,7 +15,7 @@ namespace IMCCalculator.ViewModels
         private double imc;
 
         [ObservableProperty]
-        private string clasificacion;
+        private string? clasificacion;
 
         [RelayCommand]
         private async Task Calcular()
@@ -61,4 +63,3 @@ namespace IMCCalculator.ViewModels
             };
         }
     }
-}

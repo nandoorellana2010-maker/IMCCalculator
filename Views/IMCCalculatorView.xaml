@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IMCCalculator.Views.IMCCalculatorView"
+             xmlns:viewModel="clr-namespace:IMCCalculator.ViewModels"
+             Title="IMCCalculatorView">
+    <ContentPage.BindingContext>
+        <viewModel:IMCCalculatorViewModel/>
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <VerticalStackLayout Padding="30"
+                Spacing="25"
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+            <Label
+                Text="Ingrese su peso (kg):"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+            <Entry x:Name="PesoEntry"
+                    Keyboard="Numeric"
+                    Placeholder="Peso en kg"
+                    Text="{Binding Peso, Mode=TwoWay}"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"/>
+            <Label
+                Text="Ingrese su altura (mt):"
+                verticalOptions="Center"
+                horizontalOptions="Center"/>
+                <Entry x:Name="AlturaEntry"
+                        Keyboard="Numeric"
+                        Placeholder="Altura en mt"
+                        Text="{Binding Altura, Mode=TwoWay}"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"/>
+                <Button Text="Calcular IMC"
+                        Command="{Binding CalcularCommand}"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"/>
+                <Button Text="Limpiar"
+                        Command="{Binding LimpiarCommand}"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"/>
+                <Label Text="{Binding IMC, StringFormat='IMC: {0:F2}'}"
+                    verticalOptions="Center"
+                    horizontalOptions="Center"/>
+                <Label Text="{Binding Clasificacion}"
+                    verticalOptions="Center"
+                    horizontalOptions="Center"/>
+                
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
