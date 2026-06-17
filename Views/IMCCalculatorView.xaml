@@ -24,8 +24,8 @@
                     HorizontalOptions="Center"/>
             <Label
                 Text="Ingrese su altura (mt):"
-                verticalOptions="Center"
-                horizontalOptions="Center"/>
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
                 <Entry x:Name="AlturaEntry"
                         Keyboard="Numeric"
                         Placeholder="Altura en mt"
@@ -33,19 +33,21 @@
                         VerticalOptions="Center"
                         HorizontalOptions="Center"/>
                 <Button Text="Calcular IMC"
+                        BackgroundColor="LightBlue"
                         Command="{Binding CalcularCommand}"
                         VerticalOptions="Center"
                         HorizontalOptions="Center"/>
                 <Button Text="Limpiar"
+                        BackgroundColor="LightGray"
                         Command="{Binding LimpiarCommand}"
                         VerticalOptions="Center"
                         HorizontalOptions="Center"/>
                 <Label Text="{Binding IMC, StringFormat='IMC: {0:F2}'}"
-                    verticalOptions="Center"
-                    horizontalOptions="Center"/>
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"/>
                 <Label Text="{Binding Clasificacion}"
-                    verticalOptions="Center"
-                    horizontalOptions="Center"/>
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"/>
                 
 
         </VerticalStackLayout>
